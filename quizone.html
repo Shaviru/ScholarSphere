@@ -1,0 +1,268 @@
+<html>
+<head>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Quiz</title>
+    <style>
+        .banner1 {
+            background-color: #FFD700;
+            padding: 10px;
+            color: #000;
+        }
+
+        .banner2 {
+            background-color: #87CEEB;
+            padding: 10px;
+            color: #000;
+        }
+
+        .banner3 {
+            background-color: #98FB98;
+            padding: 10px;
+            color: #000;
+        }
+
+        .banner4 {
+            background-color: #FFC0CB;
+            padding: 10px;
+            color: #000;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+
+        body, h1, h2, p {
+            margin: 5px;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+
+        header {
+            background-color: #02c39a;
+            color: #000;
+            text-align: center;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #02c39a;
+            width: 100%;
+            height: auto;
+        }
+
+        .topnav a {
+            float: right;
+            display: block;
+            color: #000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a.active {
+            background-color: #00e3b2;
+            color: #000;
+        }
+
+        .topnav a:hover {
+            background-color: #04a783;
+            color: #000;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .topnav img {
+            float: left;
+            margin-right: 10px;
+            height: 50px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <img src="images/hlogo.svg" alt="ScholarSphere" />
+            <a href="news.html">News</a>
+            <a class="active" href="subjects.html">Subjects</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html">Home</a>
+        </div>
+      </header>
+    <h1>Quiz on Elements, Compounds and Mixtures</h1>
+    <div class="question">
+        <h3 class="banner1">1. Which of the following best describes Oxygen?</h3>
+        <ul>
+            <li><input type="radio" name="q1" value="A">Element</li>
+            <li><input type="radio" name="q1" value="B">Compound</li>
+            <li><input type="radio" name="q1" value="C">Mixtures</li>
+            <li><input type="radio" name="q1" value="D">None of the above.</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner2">2. Which of the following separation techniques can we use to separate crude oil??</h3>
+        <ul>
+            <li><input type="radio" name="q2" value="A">Simple Distillation</li>
+            <li><input type="radio" name="q2" value="B">Filtration</li>
+            <li><input type="radio" name="q2" value="C">Fractional Distillation</li>
+            <li><input type="radio" name="q2" value="D">None of the above.</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner3">3. Which of the following is the simple difference between sodium chloride and air?</h3>
+        <ul>
+            <li><input type="radio" name="q3" value="A">Fixed proportions for mixtures, unlike for compounds. </li>
+            <li><input type="radio" name="q3" value="B">Fixed proportions for compounds, unlike mixtures</li>
+            <li><input type="radio" name="q3" value="C">Definite boiling points for air, unlike for sodium chloride </li>
+            <li><input type="radio" name="q3" value="D">None of the above.</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner4">4. Which of the following is the correct ratio of CaCO3?</h3>
+        <ul>
+            <li><input type="radio" name="q4" value="A">1 Calcium, 1 Carbon, 3 Oxygen </li>
+            <li><input type="radio" name="q4" value="B">1 Calcium, 3 Carbon, 3 Oxygen </li>
+            <li><input type="radio" name="q4" value="C">3 Calcium, 3 Carbon, 3 Oxygen</li>
+            <li><input type="radio" name="q4" value="D">None of the above</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner1">5. How many elements does ZnCl2 have?</h3>
+        <ul>
+            <li><input type="radio" name="q5" value="A">2</li>
+            <li><input type="radio" name="q5" value="B">3</li>
+            <li><input type="radio" name="q5" value="C">5 </li>
+            <li><input type="radio" name="q5" value="D">None of the above.</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner2">6. Which is the best separation technique for removing water, during the process?</h3>
+        <ul>
+            <li><input type="radio" name="q6" value="A"> Simple Distillation </li>
+            <li><input type="radio" name="q6" value="B"> Fractional distillation .</li>
+            <li><input type="radio" name="q6" value="C">Crystallation </li>
+            <li><input type="radio" name="q6" value="D">None of the above.</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner3">7. The tendency of an object to rotate
+ as a result of a force acting on it is known as its....</h3>
+        <ul>
+            <li><input type="radio" name="q7" value="A">Axis</li>
+            <li><input type="radio" name="q7" value="B">Linear Motion</li>
+            <li><input type="radio" name="q7" value="C">Moment</li>
+            <li><input type="radio" name="q7" value="D">None of the above.</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner4">8. What is the chemical composition of blood?</h3>
+        <ul>
+            <li><input type="radio" name="q8" value="A">Mixture</li>
+            <li><input type="radio" name="q8" value="B">Pure Compound</li>
+            <li><input type="radio" name="q8" value="C">Element </li>
+            <li><input type="radio" name="q8" value="D">None of above</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner1">9. Can ZnCl2 have another chloride atom and be the same substance?</h3>
+        <ul>
+            <li><input type="radio" name="q9" value="A">Yes</li>
+            <li><input type="radio" name="q9" value="B">Sometimes</li>
+            <li><input type="radio" name="q9" value="C">Rarely </li>
+            <li><input type="radio" name="q9" value="D">No</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h3 class="banner2">10. Can an impurity affect the m.p and b.p of a pure substance? </h3>
+        <ul>
+            <li><input type="radio" name="q10" value="A">No. </li>
+            <li><input type="radio" name="q10" value="B">Sometimes.</li>
+            <li><input type="radio" name="q10" value="C">None</li>
+            <li><input type="radio" name="q10" value="D">Yes</li>
+        </ul>
+    </div>
+
+    <button type="submit" onclick="checkAnswers()">Submit</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            var questions = 10; 
+            var score = 0;
+
+            var answers = [
+                "A",
+                "C", 
+                "B",
+                "A", 
+                "A", 
+                "C", 
+                "A", 
+                "A",
+                "D", 
+                "D"  
+            ];
+
+            for (var i = 1; i <= questions; i++) {
+                var answer = document.querySelector('input[name="q' + i + '"]:checked');
+
+                if (answer != null) {
+                    if (answer.value === answers[i-1]) {
+                        score++;
+                        answer.parentElement.classList.add("correct");
+                    } else {
+                        answer.parentElement.classList.add("incorrect");
+                    }
+                }
+            }
+
+            score = parseInt(score / questions * 100);
+            document.getElementById("result").innerHTML = "Score: " + score + "%";
+        }
+    </script>
+</body>
+</html>

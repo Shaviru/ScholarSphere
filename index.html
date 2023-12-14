@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/index-styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>ScholarSphere - Your Learning Hub</title>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <img src="images/hlogo.svg" alt="ScholarSphere" />
+            <a href="news.html">News</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="about.html">About Us</a>
+            <a class="active" href="index.html">Home</a>
+        </div>
+    </header>
+    <div class="intro">
+        <section class="welcome">
+            <h2>Welcome to<br>ScholarSphere!</h2>
+            <br>
+            <p>Empowering your learning journey with a vast collection of study materials and resources.</p>
+            <p>Get ready to excel in your studies with the tools and insights available at your fingertips.</p>
+            <br>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/MATHS.png" style="width: 100%;" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/SCIENCE.png" style="width: 100%;" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/GEOGRAPHY.png" style="width: 100%;" />
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br/>
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+        <br>
+        <section class="getstarted">
+            <h2>Get Started</h2>
+            <a href="maths.html"><button>Maths<br><img class="buttonimg" src="images/calculator.svg" alt="Books"></button></a>
+            <a href="science.html"><button>Science<br><img class="buttonimg" src="images/test-tubes.svg" alt="Books"></button></a>
+            <a href="geography.html"><button>Geography<br><img class="buttonimg" src="images/globe.svg" alt="Books"></button></a>
+        </section>
+    </div>
+    <footer>
+        &copy; 2023 ScholarSphere. All rights reserved.
+    </footer>
+  <script src="index-script.js"></script>
+</body>
+</html>

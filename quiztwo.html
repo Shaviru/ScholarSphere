@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <head>
+        <title>Timed Assessment</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .banner {
+                background-color: #f2f2f2;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            body,
+            h1,
+            h2,
+            p {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Arial", sans-serif;
+                background-color: #fff;
+                color: #000;
+            }
+
+            header {
+                background-color: #02c39a;
+                color: #000;
+                text-align: center;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: #02c39a;
+                width: 100%;
+                height: auto;
+            }
+
+            .topnav a {
+                float: right;
+                display: block;
+                color: #000;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .topnav a.active {
+                background-color: #00e3b2;
+                color: #000;
+            }
+
+            .topnav a:hover {
+                background-color: #04a783;
+                color: #000;
+            }
+
+            section {
+                padding: 20px;
+                text-align: center;
+            }
+
+            footer {
+                text-align: center;
+                padding: 10px;
+                background-color: #fff;
+                color: #000;
+            }
+
+            .topnav img {
+                float: left;
+                margin-right: 10px;
+                height: 50px;
+            }
+
+            @media screen and (max-width: 600px) {
+                .topnav a {
+                    float: none;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+          
+            .correct-answer{
+              color: green;
+              font-weight: bold;
+            }
+
+            .wrong-answer{
+              color: red;
+              font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <img src="images/hlogo.svg" alt="ScholarSphere" />
+                <a href="news.html">News</a>
+                <a class="active" href="subjects.html">Subjects</a>
+                <a href="about.html">About Us</a>
+                <a href="index.html">Home</a>
+            </div>
+        </header>
+        <h1>Timed Assessment</h1>
+        <div id="timer"></div>
+        <form id="assessmentForm">
+            <div class="banner">
+                <p>1) Which of the following states of matter has its particle arrangement mostly touching?</p>
+                <input type="radio" name="q1" value="A" /> A. Liquids<br />
+                <input type="radio" name="q1" value="B" /> B. Gases<br />
+                <input type="radio" name="q1" value="C" /> C. Solids<br />
+                <input type="radio" name="q1" value="D" /> D. Plasma<br />
+            </div>
+
+            <div class="banner">
+                <p>2) Which of the following is the product formed when NH3 and HCl diffused together?</p>
+                <input type="radio" name="q2" value="A" /> A. NH2Cl<br />
+                <input type="radio" name="q2" value="B" /> B. Nh4cL<br />
+                <input type="radio" name="q2" value="C" /> C. NH4Cl<br />
+                <input type="radio" name="q2" value="D" /> D. NCl<br />
+            </div>
+
+            <div class="banner">
+                <p>3) If Substance A has a melting point of 890*C and a boiling point of 1000*C. What would be the state of Substance A if it's in an environment heated at 889*C?</p>
+                <input type="radio" name="q3" value="A" /> A. Liquid<br />
+                <input type="radio" name="q3" value="B" /> B. Gas<br />
+                <input type="radio" name="q3" value="C" /> C. Solid<br />
+            </div>
+
+            <button type="button" onclick="checkAndSubmit()">Submit</button>
+        </form>
+        <script>
+                    var startTime = new Date().getTime();
+                    var timerElement = document.getElementById("timer");
+
+                    // Update the timer every second
+                    var timerInterval = setInterval(function() {
+                      var now = new Date().getTime();
+                      var elapsedTime = now - startTime;
+                      var secondsRemaining = 300 - Math.floor(elapsedTime / 1000);
+
+                      // Display the remaining time in minutes and seconds
+                      var minutes = Math.floor(secondsRemaining / 60);
+                      var seconds = secondsRemaining % 60;
+                      timerElement.innerHTML = "Time Remaining: " + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+
+                      // If the time is up, stop the timer and submit the form
+                      if (secondsRemaining <= 0) {
+                        clearInterval(timerInterval);
+                        document.getElementById("assessmentForm").submit();
+                      }
+                    }, 1000);
+            document.addEventListener('DOMContentLoaded', function () {
+              // Function to check answers and display result
+              function checkAndSubmit() {
+                var answers = document.getElementById('answers');
+                var form = document.getElementById('assessmentForm');
+
+                // Define correct answers
+                var correctAnswers = {
+                  q1: 'C',
+                  q2: 'C',
+                  q3: 'A'
+                };
+
+                // Iterate through questions
+                for (var question in correctAnswers) {
+                  var selectedAnswer = form[question].value;
+                  var options = document.getElementsByName(question);
+
+                  // Check if the selected answer is correct
+                  if (selectedAnswer === correctAnswers[question]) {
+                    options.forEach(function (option) {
+                      if (option.value === selectedAnswer) {
+                        option.parentNode.classList.add('correct-answer');
+                      }
+                    });
+                  } else {
+                    options.forEach(function (option) {
+                      if (option.value === selectedAnswer) {
+                        option.parentNode.classList.add('wrong-answer');
+                      } else if (option.value === correctAnswers[question]) {
+                        option.parentNode.classList.add('correct-answer');
+                      }
+                    });
+                  }
+                }
+              }
+
+              var submitButton = document.querySelector('button');
+              submitButton.addEventListener('click', checkAndSubmit);
+            });
+        </script>
+    </body>
+</html>

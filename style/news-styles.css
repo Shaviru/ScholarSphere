@@ -1,0 +1,72 @@
+body, h1, h2, p {
+  margin: 5px;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+header {
+  background-color: #02c39a;
+  color: #000;
+  text-align: center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #02c39a;
+  width: 100%;
+  height: auto;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a.active {
+  background-color: #00e3b2;
+  color: #000;
+}
+
+.topnav a:hover {
+  background-color: #04a783;
+  color: #000;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+}
+
+.topnav img {
+  float: left;
+  margin-right: 10px;
+  height: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {
+      float: none;
+      width: 100%;
+      text-align: center;
+  }
+}
+
+h1, h2, p{
+  text-align: center;
+}
